@@ -1,0 +1,226 @@
+{
+    "mainTitle": "JavaScript",
+    "contents": {
+      "items": [
+        {
+          "id": 1,
+          "number": "1",
+          "title": "History",
+          "subItems": [
+            {
+              "id": 1.1,
+              "number": "1.1",
+              "title": "Creation at Netscape",
+              "content": "Content for Creation at Netscape"
+            },
+            {
+              "id": 1.2,
+              "number": "1.2",
+              "title": "Adoption by Microsoft",
+              "content": "Content for Adoption by Microsoft"
+            },
+            {
+              "id": 1.3,
+              "number": "1.3",
+              "title": "The rise of JScript",
+              "content": "Content for The rise of JScript"
+            },
+            {
+              "id": 1.4,
+              "number": "1.4",
+              "title": "Growth and standardization",
+              "content": "Content for Growth and standardization"
+            },
+            {
+              "id": 1.5,
+              "number": "1.5",
+              "title": "Server-side JavaScript and Node.js",
+              "content": "Content for Server-side JavaScript and Node.js"
+            },
+            {
+              "id": 1.6,
+              "number": "1.6",
+              "title": "Reaching maturity",
+              "content": "Content for Reaching maturity"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "number": "2",
+          "title": "Trademark"
+        },
+        {
+          "id": 3,
+          "number": "3",
+          "title": "Website client-side usage",
+          "subItems": [
+            {
+              "id": 3.1,
+              "number": "3.1",
+              "title": "Examples of scripted behavior"
+            },
+            {
+              "id": 3.2,
+              "number": "3.2",
+              "title": "Libraries and frameworks"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "number": "4",
+          "title": "Other usage"
+        },
+        {
+          "id": 5,
+          "number": "5",
+          "title": "Features",
+          "subItems": [
+            {
+              "id": 5.1,
+              "number": "5.1",
+              "title": "Imperative and structured"
+            },
+            {
+              "id": 5.2,
+              "number": "5.2",
+              "title": "Weakly typed"
+            },
+            {
+              "id": 5.3,
+              "number": "5.3",
+              "title": "Dynamic"
+            },
+            {
+              "id": 5.4,
+              "number": "5.4",
+              "title": "Object-orientation (prototype-based)"
+            },
+            {
+              "id": 5.5,
+              "number": "5.5",
+              "title": "Functional"
+            },
+            {
+              "id": 5.6,
+              "number": "5.6",
+              "title": "Delegative"
+            },
+            {
+              "id": 5.7,
+              "number": "5.7",
+              "title": "Miscellaneous"
+            },
+            {
+              "id": 5.8,
+              "number": "5.8",
+              "title": "Vendor-specific extensions"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "number": "6",
+          "title": "Syntax",
+          "subItems": [
+            {
+              "id": 6.1,
+              "number": "6.1",
+              "title": "Simple examples"
+            },
+            {
+              "id": 6.2,
+              "number": "6.2",
+              "title": "More advanced examples"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "number": "7",
+          "title": "Security",
+          "subItems": [
+            {
+              "id": 7.1,
+              "number": "7.1",
+              "title": "Cross-site vulnerabilities"
+            },
+            {
+              "id": 7.2,
+              "number": "7.2",
+              "title": "Misplaced trust in the client"
+            },
+            {
+              "id": 7.3,
+              "number": "7.3",
+              "title": "Misplaced trust in developers"
+            },
+            {
+              "id": 7.4,
+              "number": "7.4",
+              "title": "Browser and pluging coding errors"
+            },
+            {
+              "id": 7.5,
+              "number": "7.5",
+              "title": "Sandbox implementation errors"
+            },
+            {
+              "id": 7.6,
+              "number": "7.6",
+              "title": "Hardware vulnerabilities"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "number": "8",
+          "title": "Development tools"
+        },
+        {
+          "id": 9,
+          "number": "9",
+          "title": "Related technologies",
+          "subItems": [
+            {
+              "id": 9.1,
+              "number": "9.1",
+              "title": "Java"
+            },
+            {
+              "id": 9.2,
+              "number": "9.2",
+              "title": "JSON"
+            },
+            {
+              "id": 9.3,
+              "number": "9.3",
+              "title": "WebAssembly"
+            },
+            {
+              "id": 9.4,
+              "number": "9.4",
+              "title": "Transpilers"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "number": "10",
+          "title": "References"
+        },
+        {
+          "id": 11,
+          "number": "11",
+          "title": "Further reading"
+        },
+        {
+          "id": 12,
+          "number": "12",
+          "title": "External links"
+        }
+      ]
+    }
+  }
+  

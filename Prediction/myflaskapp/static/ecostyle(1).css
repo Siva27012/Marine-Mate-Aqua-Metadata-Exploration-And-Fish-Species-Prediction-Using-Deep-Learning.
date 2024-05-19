@@ -1,0 +1,127 @@
+html, body{
+  min-height: 100%;
+}
+body{
+  position: relative;
+}
+*{
+    outline: none;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  z-index: 9;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
+}
+
+#main {
+    transition: margin-left .5s;
+    padding-right: 6px;
+    padding-top: 15px;
+}
+
+
+.font-1{
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 21px;
+}
+.hr-social{
+    margin:0px;
+    margin-top: 30px;
+}
+.index-part-3{
+    padding-top: 10%;
+    padding-bottom: 60px;
+}
+/* .index-part-2,.index-part-4{
+    background-color: #f7f7f7;
+} */
+hr{
+    background-color: #c7c7c7; height: 1px; border: 0;
+    margin-top: 1vh;
+}
+h1,h2,h4,h3,h5,a,button{
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 55px;
+}
+h2{
+    font-size:45px;
+}
+h3{
+    font-size: 32px;
+}
+h4{
+    font-size: 21px;
+}
+h5{
+    font-size: 100%;
+}
+h6{
+    font-size: 100%;
+}
+.sub-text{
+    padding-right: 25%;
+    padding-left: 25%;
+    padding-bottom: 3%;   
+}
+
+.font-2{
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    line-height: 30px;
+}
+.round-img{
+    display: table;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+.hr-short{
+     width:5%;
+     margin-left: 0px;
+}
+.hr-mid{
+    width: 6%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@media only screen and (max-height: 400px){
+    .head-bar{
+        padding-top: 1vh;
+        max-height: 10vh;
+    }
+    .wow-logo{
+        padding-bottom: 2vh;
+        padding-top:10vh;
+    }
+    .img-logo{
+        max-height: 30vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .helmet{
+        max-height: 20vh;
+    }
+    .btn-1{
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+    .head{
+        min-height: 150vh;
+        background-size:60vh;
+    }
+        .wow-btn{
+         padding-top:10vh;
+         padding-bottom:4vh;
+    }
+    
+} 

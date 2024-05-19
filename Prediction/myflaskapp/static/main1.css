@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+@import url(<path-to-gemini-scrollbar>/gemini-scrollbar.css);
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(255, 111, 0);
+}
+
+body {
+  background: rgba(184, 209, 218, 0.638);
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 0.5rem;
+  width: 80%;
+  left: 10%;
+
+  background: rgb(255, 111, 0);
+  z-index: -1;
+}
+
+.heading span {
+  font-size: 3rem;
+  color: #D2D7DF;
+  background: #4d9fb8;
+  padding: .5rem 1.5rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0);
+  border-radius: .5rem;
+}
+
+.btn {
+  background-color:rgb(255, 111, 0);;
+  border: 1px solid rgb(255, 111, 0);;
+  border-radius: 5px;
+  box-shadow: rgba(255, 111, 0, 0.67) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #f6f6f6;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+          background-color: #3837377a;
+}
+.btn:focus {
+  border-color: rgb(255, 255, 255);
+  box-shadow: rgba(78, 78, 78, 0.5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display:flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 9%;
+  z-index: 10000;
+  background:  rgb(184, 209, 218);
+}
+
+.header .logo {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.header .logo span {
+  color: rgb(255, 111, 0);
+}
+
+.header .navbar a {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  font-size: 1.7rem;
+  color: #000000;
+}
+
+.header .navbar a:hover {
+  background:  #EEE9DA;
+}
+
+#menu-btn {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+.home{
+  padding: 54px;
+  
+  padding-bottom: 10rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.home .slide {
+  min-height: 90vh;
+  /* min-width: 1000vh; */
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 2rem 9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .slide .content {
+  width: 60rem;
+}
+
+.home .slide .content span {
+  font-size: 2rem;
+  color: rgb(255, 111, 0);
+  display: block;
+}
+
+.home .slide .content h3 {
+  font-size: 5rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+.swiper-pagination-bullet {
+  height: 2rem;
+  width: 2rem;
+  background: #fff;
+  border-radius: 0;
+}
+#sss1{
+  background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.511)), url(banner-bg.jpg) no-repeat;
+}
+#sss2{
+  background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.49)), url(cardio.jpg) no-repeat;
+}
+#sss3{
+  background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.375)), url(fitnees.jpg) no-repeat;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background:rgb(255, 111, 0);
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+    scroll-padding: 7rem;
+  }
+  .header {
+    padding: 0 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+  .home .slide {
+    padding: 2rem 5%;
+  }
+  .home .slide .content {
+    width: 50rem;
+  }
+  .home .slide .content h3 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  #menu-btn.fa-times {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .header {
+    padding: 2rem;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #BDCDD6;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+.yourchoice .slide {
+  background:  rgba(0, 0, 0, 0.638);
+  margin-bottom: 7rem;
+}
+
+.yourchoice .slide:hover .image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.yourchoice .slide .image {
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.yourchoice .slide .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.yourchoice .slide .content {
+  padding: 2rem;
+}
+
+.yourchoice .slide .content .link {
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.yourchoice .slide .content .link a {
+  color: rgb(255, 111, 0);
+}
+
+.yourchoice .slide .content .link a:hover {
+  color: #fff;
+}
+
+.yourchoice .slide .content .link span {
+  color: #fff;
+  padding: 0 1rem;
+}
+
+.yourchoice .slide .content h3 {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.yourchoice .slide .content p {
+  font-size: 1.5rem;
+  color: #aaa;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.legends .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: 1.5rem;
+}
+
+.legends .box-container .box {
+  height: 40rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.legends .box-container .box:hover .content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.legends .box-container .box img {
+  height: 100%;
+  width: 100%;
+  border: 3px solid  rgb(255, 111, 0);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.legends .box-container .box .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:  rgb(255, 111, 0);
+  padding: 2rem;
+  -webkit-transform: translateY(6.5rem);
+          transform: translateY(6.5rem);
+}
+
+.legends .box-container .box .content span {
+  font-size: 1.5rem;
+  color:  rgb(0, 0, 0);
+}
+
+.legends .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #fff;
+  padding-top: .5rem;
+}
+
+.legends .box-container .box .content .share {
+  padding-top: 2rem;
+  margin-top: 1.5rem;
+  border-top: 0.1rem solid #aaa;
+}
+
+.legends .box-container .box .content .share a {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 1.5rem;
+}
+
+.legends .box-container .box .content .share a:hover {
+  color:   rgb(0, 0, 0);
+}
+.legends p{
+  font-size: 1.5rem;
+  color: #aaa;
+  line-height: 2;
+  
+
+}
+.explore {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('cardio.gif') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.explore span {
+  font-size: 2rem;
+  color:  rgb(255, 111, 0);
+}
+
+.explore h3 {
+  padding-top: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.explore p {
+  margin: 1rem auto;
+  max-width: 60rem;
+  font-size: 1.5rem;
+  color: #aaa;
+  line-height: 2;
+}

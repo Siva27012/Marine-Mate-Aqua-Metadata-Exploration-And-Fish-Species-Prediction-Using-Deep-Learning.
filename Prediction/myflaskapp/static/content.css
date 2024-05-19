@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  :root {
+    font-size: 62.5%;
+    --light-gray: aliceblue;
+    --blue: rgb(6, 69, 173);
+    --white-bone: rgb(248, 249, 250);
+    --light-black: rgb(32, 33, 34);
+  }
+  
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(255, 111, 0);
+}
+
+  
+  body {
+    padding: 2em;
+    margin-top: 2rem;
+    background-color: aliceblue;
+    font-family: sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .header1 {
+    font-family: 'Nunito', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display:flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 9%;
+    z-index: 10000;
+    background: rgb(184, 209, 218);
+    
+  }
+  
+  .header1 .logo {
+    font-weight: bolder;
+    color: #fff;
+    font-size: 3rem;
+    text-decoration:none;
+  }
+  
+  .header1 .logo span {
+    color: rgb(255, 111, 0);
+  }
+  
+  .header1 .navbar1 a {
+    font-weight: bolder;
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    font-size: 1.7rem;
+    color: #000000;
+    text-decoration:none;
+  }
+  
+  .header1 .navbar1 a:hover {
+    background:  #EEE9DA;
+  }
+  .header1 #menu-btn {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .header1 #menu-btn {
+      display: inline-block;
+    }
+    .header1 #menu-btn.fa-times {
+      transform: rotate(180deg);
+    }
+    .header1 .navbar1 {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: #BDCDD6;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header1 .navbar1.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header1 .navbar1 a {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+  .main-title {
+    padding: .5em 0;
+    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 30px;
+  
+    font-family: 'Georgia', serif;
+    font-size: clamp(2.3rem, 3vw, 2.88rem);
+    font-weight: 500;
+  }
+  
+  .table-of-contents {
+    max-width: 365px;
+    padding: .75ch;
+    border: 1px solid ;
+    
+    font-size: 1.5rem;
+    
+    background: aliceblue;
+  }
+  
+  .table-narrow {
+    width: 160px;
+  }
+  
+  .list-invisible {
+    display: none;
+  }
+  
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 4px 0;
+  }
+  
+  .table__title {
+    margin-right: .5ch;
+    
+    font-size: 1.5rem;
+  }
+  
+  .toggle-wrapper::before {
+    content: '[';
+    
+    color: var(--light-black);
+  }
+  
+  .toggle-wrapper::after {
+    content: ']';
+    
+    color: var(--light-black);
+  }
+  
+  .toggle {
+    padding: 0;
+    border: none;
+    
+    font-size: 1.5rem;
+    
+    color: var(--blue);
+    background-color: inherit;
+  }
+  
+  .toggle:hover {
+    text-decoration: underline var(--blue);
+    cursor: pointer;
+  }
+  
+  .toggle:focus {
+    border: 1px dotted var(--blue);
+    
+    text-decoration: underline var(--blue);
+  }
+  
+  .toggle:active {
+    border: none;
+    text-decoration: none;
+  }
+  
+  .table__list,
+  .table__nested-list {
+    list-style: none;
+  }
+  
+  .content__number {
+    margin-right: .5ch;
+    
+    color: var(--light-black);
+  }
+  
+  .table__list {
+    padding: 0;
+  }
+  
+  .table__nested-list {
+    padding-left: 3ch;
+  }
+  
+  .table__link {
+    color: var(--blue);
+    
+    font-weight: 500;
+    line-height: 1.6;
+    
+    text-decoration: none;
+  }
+  
+  .table__link:active {
+    color: rgb(245, 194, 66);
+  }
+  
+  .table__link:hover {
+    text-decoration: underline var(--blue);
+  }
+  .container {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    /* this will make the children of the container sit side by side */
+  }
+  
+  .sidebar {
+   position: absolute;
+   top: 0;
+    left: 0;
+    width: 250px;
+    /* set a fixed width for the sidebar */
+    background-color: #f5f5f5;
+    /* just for styling */
+    padding: 5px;
+    /* just for styling */
+    box-sizing: border-box;
+    /* so that the padding is included in the width */
+    flex-shrink: 0;
+    /* this will prevent the sidebar from shrinking when there's not enough space */
+  }
+  
+  .main-content {
+      margin-left: 250px;
+    flex-grow: 1;
+    /* this will make the main content take up the rest of the space */
+    padding: 20px;
+    
+    overflow-y: auto;
+    /* just for styling */
+    box-sizing: border-box;
+    border: 2px solid black;
+    /* so that the padding is included in the width */
+  }
+  .paragraph_content{
+      font-size: 2rem;
+      text-align: justify;
+      display: none;
+   }
+  .section-heading{
+    
+   text-align: center;
+   padding-bottom: 25px;
+  }
+  
+  .sub-heading{
+    padding: 25px 2px;
+  }
+  .content_image{
+    /* max-width: 250px; */
+    max-height: 250px;
+   justify-content: space-around 250px;
+    padding: 25px 25px;
+  }
+
+  .hook_image img{
+    display: flex;
+max-width: 400px;
+padding: 30px 1px;
+  }
+.knot__ p{
+ 
+margin-left: 414px;
+margin-top: -705px;
+}
+.knot__ .knot_p{
+  display: flex;
+margin-left: 414px;
+margin-top: -781px;
+}
+.knot__ .hook_p{
+  
+margin-left: 414px;
+margin-top: -459px;
+}
+
+
+.knot__ .align_text{
+  margin-top: 12px;
+  margin-left: 0px;
+}
