@@ -15,4 +15,4 @@ aquaculture, sea surface temperature, PH level and basic web sites that you
 can visit and get knowledge about fishing zone, minerals, etc. Our 
 progressing project will aim to give a detail description about ocean and 
 its necessary information in a single platform.
-![image]([https://github.com/Siva27012/Intelligent-Garbage-Classifcation-using-Deep-learning/assets/138695695/b19a67d0-67f9-4c33-96fa-64e77bd12496](https://github.com/Siva27012/Marine-Mate-Aqua-Metadata-Exploration-And-Fish-Species-Prediction-Using-Deep-Learning./blob/main/Prediction/myflaskapp/static/image.png))
+![image](https://github.com/Siva27012/Marine-Mate-Aqua-Metadata-Exploration-And-Fish-Species-Prediction-Using-Deep-Learning./blob/main/Prediction/myflaskapp/static/image.png)
