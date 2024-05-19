@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map🗺️</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='map.css')}}">
+  </head>
+ 
+  <body>
+    <section>
+      <div class="map_container" id="1">
+        <img src="\images\map.png" alt="map" class="map_map">
+    </div>
+    </section>
+    
+
+  <!-- minor maps -->
+  
+  <section class="map" id="minor_map">
+    
+    <div class="text-container">
+      <h2>Minor Ports of Tamil Nadu</h2>
+      <p>Click on the names in the map to know  more about each port.</p>
+    </div> 
+    <div class="image-item">
+      <img src="static/port/english_map.png" class="image_size" usemap="#image-map">
+     
+      <map name="image-map">
+      <area target="" alt="1" title="1" href="" coords="2419,655,2206,620" shape="rect" data-modal-target="#modal1">
+      <area target="" alt="2" title="2" href="" coords="2191,671,2422,731" shape="rect"data-modal-target="#modal2">
+      <area target="" alt="3" title="3" href="" coords="2064, 1108,2262, 1133" shape="rect"data-modal-target="#modal3">
+      <area target="" alt="4" title="4" href="" coords="1959, 1384,2156,1406" shape="rect" data-modal-target="#modal4">
+      <area target="" alt="5" title="5" href="" coords="1945, 1421,2252, 1441" shape="rect" data-modal-target="#modal5">
+      <area target="" alt="6" title="6" href="" coords="1951, 1461,2297,1476" shape="rect" data-modal-target="#modal6">
+      <area target="" alt="7" title="7" href="" coords="1964, 1493,2226,1516" shape="rect" data-modal-target="#modal7">
+      <area target="" alt="8" title="8" href="" coords="2054, 1562,2332,1592" shape="rect" data-modal-target="#modal8">
+      <area target="" alt="9" title="9" href="" coords="1999, 1677,2274,1697" shape="rect" data-modal-target="#modal9">
+      <area target="" alt="11" title="11" href="" coords="2001, 1920,2266, 1943" shape="rect" data-modal-target="#modal10">
+      <area target="" alt="10" title="10" href="" coords="2004, 1814,2292, 1837" shape="rect"data-modal-target="#modal11"> 
+      <area target="" alt="12" title="12" href="" coords="1604,2467,1749,2522" shape="rect" data-modal-target="#modal12"> 
+      <area target="" alt="13" title="13" href="" coords="1761,2496,2021,2516" shape="rect" data-modal-target="#modal13"> 
+      <area target="" alt="14" title="14" href="" coords="1194,2897, 1396,2927" shape="rect" data-modal-target="#modal14"> 
+      <area target="" alt="15" title="15" href="" coords="1035,3009, 1311,3046" shape="rect" data-modal-target="#modal15">
+       <area target="" alt="16" title="16" href="" coords="958, 3054, 1216,3090" shape="rect" data-modal-target="#modal16">
+      <area target="" alt="17" title="17" href="" coords="663,3016,858,3043" shape="rect" data-modal-target="#modal17" >
+      </map>
+    </div>
+    <div>
+      <h2 class="tittle">News Update</h2>
+    <div class="sidebar">
+      
+      <div class="news-container">
+        <div class="news-item" id="item_color"><a href="https://timesofindia.indiatimes.com/city/madurai/tuticorin-to-become-hub-of-green-energy-pm-modi-lays-foundation-stone-for-outer-harbour-container-port/articleshow/108063777.cms">Tuticorin will become hub of green energy</a></div>
+        <div class="news-item" id="item_color"><a href="https://chennaiport.gov.in/api/static/default/vessel_report/cargohandled.pdf">Today cargo handled.</a></div>
+        <div class="news-item" id="item_color">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="news-item" id="item_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <!-- Add more news items as needed -->
+      </div>
+  </div>
+</div>
+  </section>
+  <!-- majormap -->
+  
+    <section class="map" id="major_map">
+      
+      <div class="text-container">
+        <h2>Major Ports of Tamil Nadu</h2>
+        <p>Click on the names in the map to know  more about each port.</p>
+      </div> 
+      <div class="image-item">
+        <img src="static/port/major_map.png" class="image_size" usemap="#image_map_major">
+       <map name="image_map_major">
+          <area alt="enoore port" title="enoore port" href="" coords="659,136,684,150" shape="rect" data-modal-target="#modalennore">
+          <area alt="chennai port" title="chennai port" href="" coords="654,160,679,176" shape="rect" data-modal-target="#modalchennai">
+          <area alt="V.O. Chidambaranar Port " title="V.O. Chidambaranar Port " href="" coords="414,658,436,678" shape="rect" data-modal-target="#modalva">
+       </map>
+      </div>
+      <div>
+        <h2 class="tittle">News Update</h2>
+      <div class="sidebar" >
+        
+        <div class="news-container" >
+          <div class="news-item" id="color123"><a href="https://chennaiport.gov.in/api/static/default/career/EEE.pdf" >Filling up of one post of Executive Engineer (Elec.) (Class I) on Absorption/Deputation Method - Last Date 22.05.2024</a></div>
+          <div class="news-item" id="color123"><a href="https://chennaiport.gov.in/api/static/default/career/EE(E&C).pdf" >Filling up of two post of Executive Engineer [E&C] (Class I ) on Absorption/Deputation Method in M&EE Department - Last Date 22.05.2024</a></div>
+          <div class="news-item" id="color123"><a href="https://chennaiport.gov.in/api/static/default/career/HM.pdf" >Filling up of one post of Harbour Master (Dy.HOD) on Composite Method - Last Date 15.04.2024</a></div>
+          <div class="news-item" id="color123"><a href="https://chennaiport.gov.in/api/static/default/career/DTM.pdf" >Filling up of one post of Deputy Traffic Manager (Class I) on Absorption/Deputation Method in Traffic Department - Last Date 15.04.2024</a></div>
+          <div class="news-item" id="color123"><a href="https://ibpsonline.ibps.in/vocpamarc24" >Filling up of class 1 posts in VOC port authority through direct recruitment</a></div>
+          <div class="news-item" id="color123"><a href="https://www.vocport.gov.in/port/UserInterface/PDF/Pilot.PDF">Engagement of Trainee pilot on a contractual basis</a></div>
+          <div class="news-item" id="color123"><a href="https://www.ennoreport.gov.in/upload/65ba4dac45e4ePost_MD_IPA.pdf">Filling up of managing director IPA on deputation basis</a></div>
+          <!-- Add more news items as needed -->
+        </div>
+    </div>
+  </div>
+    </section>
+      
+    <!-- sea_borders map -->
+    <section class="map" id="sea_borders">
+     
+      <div class="text-container">
+        <h2>Sea borders of india</h2>
+       <p>Click on the names in the map to know  more about the borders.</p>
+      </div>
+      <div class="image-item">
+       
+      <img src="static/port/sea_borders.webp"  class="image_size" usemap="#image_map_border">
+        
+         <map name="image_map_border">
+           <area alt="india west" title="india west" href="" coords="130,177,196,201" shape="rect" data-modal-target="#india_west">
+           <area alt="india east" title="india east" href="" coords="311,156,370,180" shape="rect"data-modal-target="#india_east">
+           <area alt="india_andaman" title="india_andaman" href="" coords="488,271,550,295" shape="rect"data-modal-target="#india_andaman">
+           <area alt="srilanka_seaborders" title="srilanka_seaborders" href="" coords="265,333,361,357" shape="rect"data-modal-target="#srilanka_seaborders">
+         </map>
+      </div>
+      <div>
+      <!--  <h2 class="tittle">News Update</h2>
+      <div class="sidebar">
+        
+        <div class="news-container">
+          <div class="news-item" id="item_color2"><a href="https://timesofindia.indiatimes.com/city/madurai/tuticorin-to-become-hub-of-green-energy-pm-modi-lays-foundation-stone-for-outer-harbour-container-port/articleshow/108063777.cms">Tuticorin will become hub of green energy</a></div>
+          <div class="news-item" id="item_color2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="news-item" id="item_color2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item"id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+           Add more news items as needed 
+        </div>
+    </div>-->
+ 
+    </section>
+  
+    <!-- sea_routes map -->
+    <section class="map" id="sea_routes">
+     
+      <div class="text-container">
+        <h3>Sea borders of india</h3>
+       <p>Click on the names in the map to know  more about the borders.</p>
+      </div>
+      <div class="image-item">
+       
+      <img src="/static/port/routes.png"  class="image_size" usemap="#image_map_routes">
+        
+           
+   
+    <map name="#image_map_routes">
+    <area target="" alt="chennai-kolkata" title="chennai-kolkata" href="" coords="365,666,375,675,475,553,467,548" shape="poly" data-modal-target="#chennai-kolkata">
+    <area target="" alt="chennai-yango" title="chennai-yango" href="" coords="364,688,524,648,526,660,367,700" shape="poly" data-modal-target="#chennai-yango">
+    <area target="" alt="colmbo-kolkata" title="colmbo-kolkata" href="" coords="455,656,512,500,522,504,466,660" shape="poly" data-modal-target="#colmbo-kolkata">
+    <area target="" alt="chennai-blair" title="chennai-blair" href="" coords="428,702,597,715,592,725,428,713" shape="poly" data-modal-target="#chennai-blair">
+    <area target="" alt="chennai-penang" title="chennai-penang" href="" coords="435,740,590,807,583,818,433,750" shape="poly" data-modal-target="#chennai-penang">
+    <area target="" alt="nagapatinam-penag" title="nagapatinam to penag" href="" coords="387,778,591,835,587,844,386,789" shape="poly" data-modal-target="#nagapatinam-penag">
+    <area target="" alt="colombo-penang" title="colombo-penang" href="" coords="455,908,635,902,635,912,459,916" shape="poly" data-modal-target="#colombo-penang">
+    <area target="" alt="kolkata- yango" title="kolkata- yango" href="" coords="595,515,732,594,730,599,592,522" shape="poly" data-modal-target="#kolkata-yango">
+    <area target="" alt="kolkata-penang" title="kolkata-penang" href="" coords="604,545,611,538,726,652,722,658" shape="poly" data-modal-target="#kolkata-penang">
+    <area target="" alt="port blair-yango" title="port blair-yango" href="" coords="712,705,771,542,778,547,724,710" shape="poly" data-modal-target="#portblair-yango">
+    <area target="" alt="mumbai-colmbo" title="mumbai-colmbo" href="" coords="110,675,117,674,183,833,175,838,165,800" shape="poly" data-modal-target="#mumbai-colmbo">
+    <area target="" alt="cape town-mumbai" title="cape town - mumbai" href="" coords="9,740,93,581,100,585,17,744" shape="poly" data-modal-target="#capetown-mumbai"> 
+    <area target="" alt="zanzibar-mumbai" title="zanzibar-mumbai" href="" coords="10,657,116,531,121,538, 15,670" shape="poly" data-modal-target="#zanzibar-mumbaie">
+    <area target="" alt="aden-mimbai" title="aden-mimbai" href="" coords="16,519,79,518,92,533,5,539" shape="poly" data-modal-target="#aden-mimba">
+    <area target="" alt="karachi-mumbai" title="karachi-mumbai" href="" coords="13,435,29,430,75,487,63,502" shape="poly" data-modal-target="#karachi-mumbai">
+    <area target="" alt="chennai-colombo" title="chennai-colombo" href="" coords="347,737,385,813,377,835,354,791" shape="poly" data-modal-target="#chennai-colombo">
+    </map> 
+  </div>
+    <!--<h2 class="tittle">News Update</h2>
+      <div class="sidebar">
+        
+        <div class="news-container">
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="news-item" id="item_color2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item"id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="news-item" id="item_color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          Add more news items as needed 
+        </div>-->
+    </section>
+  
+   
+  
+    
+
+    
+
+      
+
+
+      <!-- for popup -->
+
+    
+      <div id="overlay"></div>
+
+      <div id="modal1" class="modal">
+        <div class="modal-header">
+          <div class="title">Kattupalli</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Kattupalli Port, situated in North Chennai, is a state-of-the-art multi-cargo port offering seamless cargo movement with 24x7 congestion-free access roads. It boasts dedicated facilities for Direct Port Delivery clearance, on-dock Container Freight Station, and flexible carting services. With deep draft berths and multipurpose terminals, it efficiently handles diverse cargo including Fertilizer, Agri, Mines & Minerals, Steel & Project Cargo. Acquired by Adani ports and special economic zone (APSEZ) in 2018, the port's infrastructure supports simultaneous handling of multiple vessels and ensures swift vehicle turnaround. Strategically located in Thiruvallur district, it serves the hinterland of North Tamilnadu, Chennai Region, Bangalore region, and South Andhra Pradesh, facilitating trade with a capacity of 1.2 million TEUs per annum.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-header">
+          <div class="title">Ennore Minor Port </div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Ennore Port, also known as Kamarajar Port Limited, stands as a significant minor port in Tamil Nadu, India. Located along the Coromandel Coast, just 20 kilometers north of Chennai Port, it serves as a crucial gateway for trade and commerce in the region. Equipped with modern infrastructure and state-of-the-art facilities, Ennore Port efficiently handles various types of cargo, including bulk, breakbulk, and containerized cargo. Its strategic location and excellent connectivity via road and rail networks further enhance its importance as a maritime hub. Committed to environmental sustainability, the port implements eco-friendly practices and initiatives for pollution control and waste management. Contributing to the economic development of Tamil Nadu, Ennore Port attracts investments, generates employment, and drives international trade. With ongoing expansion plans and development initiatives, it aims to strengthen its position as a leading maritime gateway in South India.</p>
+        </div>
+      </div>
+      <div id="overlay"></div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-header">
+          <div class="title">Panaiyur</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Panaiyur is a minor port located in Tamil Nadu, India. It serves as a significant maritime hub facilitating coastal trade and fishing activities in the region. With its strategic location along the Coromandel Coast, Panaiyur Port plays a crucial role in the transportation of goods and materials, particularly commodities such as salt, fish, and other marine products. Despite being smaller in scale compared to major ports, Panaiyur Port contributes to the local economy by providing employment opportunities and supporting the livelihoods of coastal communities engaged in fishing and related activities. Additionally, efforts to enhance infrastructure and improve connectivity further contribute to the port's importance in regional trade and commerce.</p>
+        </div>
+      </div>
+      <div id="overlay"></div>
+
+      <div id="modal4" class="modal">
+        <div class="modal-header">
+          <div class="title">Cuddalore</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Cuddalore Government Port, officially known as the Cuddalore Port Trust, is a pivotal maritime asset nestled in the town of Cuddalore, Tamil Nadu, India. Strategically positioned along the southeastern coast, it serves as a vital conduit for the import and export of various commodities, ranging from coal and fertilizers to minerals and general cargo. Boasting modern infrastructure and efficient handling facilities, the port ensures seamless operations and plays a crucial role in supporting regional trade and industrial growth. Its robust connectivity via road and rail networks enhances accessibility, enabling the smooth flow of goods to and from major transportation hubs. Beyond its economic contributions, the port serves as an employment generator and a catalyst for socio-economic development in the region. With ongoing efforts to expand capacity and improve efficiency, Cuddalore Government Port remains steadfast in its commitment to bolstering Tamil Nadu's maritime prowess and fostering international trade relations.</p>
+        </div>
+      </div>
+      <div id="overlay"></div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-header">
+          <div class="title">Thiruchopuram</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Thiruchopuram Port, located in Tamil Nadu, is a minor port that serves as a vital link in the maritime trade network of the region. Situated strategically along the coastline, Thiruchopuram Port facilitates the transportation of goods and commodities, contributing significantly to regional commerce and industry. Despite its smaller scale compared to major ports, Thiruchopuram Port plays a crucial role in supporting the local economy by providing employment opportunities and fostering trade relations. With its commitment to enhancing infrastructure and operational efficiency, the port continues to play an integral part in the economic growth and development of Tamil Nadu.</p>
+        </div>
+      </div>
+      <div id="overlay"></div>
+
+      <div id="modal6" class="modal">
+        <div class="modal-header">
+          <div class="title">Silambimangalam</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Silambimangalam Port, located in Tamil Nadu, is a minor port that serves as an important maritime hub in the region. Situated strategically along the coastline, Silambimangalam Port plays a significant role in facilitating the transportation of goods and commodities, contributing to regional trade and commerce. Despite its smaller size compared to major ports, Silambimangalam Port is essential for local industries and businesses, providing a crucial link for the import and export of goods. With ongoing efforts to improve infrastructure and operational efficiency, the port continues to play a vital role in supporting economic growth and development in Tamil Nadu.</p>
+        </div>
+      </div>
+      
+      <div id="overlay"></div>
+
+      <div id="modal7" class="modal">
+        <div class="modal-header">
+          <div class="title">Parangipettai</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Parangipettai, located in Tamil Nadu, is a minor port with significant importance in the region's maritime activities. Positioned strategically along the coast, Parangipettai Port serves as a crucial gateway for the transportation of goods and commodities, playing a pivotal role in facilitating regional trade and commerce. Despite its status as a minor port, Parangipettai Port contributes substantially to the local economy by providing employment opportunities and supporting various industries. With its ongoing efforts to enhance infrastructure and operational efficiency, the port continues to strengthen its position as a key player in Tamil Nadu's maritime sector, contributing to the region's economic growth and development.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal8" class="modal">
+        <div class="modal-header">
+          <div class="title">PY-03 Oilfield</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>PY-03 Oilfield, located off the coast of Tamil Nadu in the Palk Bay region, is a significant offshore oil and gas field contributing to India's energy sector. Situated near the coastal town of Parangipettai, the PY-03 Oilfield is known for its reserves of crude oil and natural gas. The field is operated by various oil exploration and production companies, leveraging advanced technologies for drilling and extraction activities. The development of PY-03 Oilfield has played a crucial role in reducing India's dependency on imported energy resources, thus contributing to the nation's energy security and economic growth. Additionally, the presence of this oilfield has led to the establishment of associated infrastructure and facilities, creating employment opportunities and stimulating local economies in the region. Despite its challenges, including environmental concerns and technical complexities associated with offshore drilling, PY-03 Oilfield remains an integral part of India's energy landscape, supporting both domestic consumption and export requirements.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal9" class="modal">
+        <div class="modal-header">
+          <div class="title">Tirukkadaiyur</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>M/s PPN Power Generating Company had developed this port to handle Naphtha through Single Point Mooring required for 330 MW Gas Combined Cycle Power Project Plant at Pillaiperumalnallur.Natural Gas from PY-01 Oil field is also handled by M/s. Hindustan Oil Exploration Company Ltd.This port is in operation since 2001.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal10" class="modal">
+        <div class="modal-header">
+          <div class="title">Nagappattinam</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Nagapattinam Government Port, located in Tamil Nadu, stands as a pivotal maritime facility along the Coromandel Coast, serving as a vital conduit for trade and commerce. Equipped with modern infrastructure and advanced handling facilities, the port efficiently manages a diverse range of cargo, including petroleum products, agricultural goods, and general cargo, bolstering regional economic activity. Its strategic connectivity to road and rail networks ensures seamless transportation of goods, further enhancing its significance as a key player in the maritime industry. Beyond its economic contributions, the port plays a crucial role in disaster management and relief efforts, showcasing its multifaceted importance to the region. With ongoing expansion and modernization endeavors, Nagapattinam Government Port continues to strengthen its position as a cornerstone of Tamil Nadu's economic growth and maritime trade landscape.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal11" class="modal">
+        <div class="modal-header">
+          <div class="title">Thirukkuvalai</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>The Thirukkuvalai Port is a deep-water multi-modal port being developed as a part of an integrated port and power project in Nagapattinam, Tamil Nadu. It is being developed by Tridem Port & Power Company Pvt. Ltd.[1] The entire project will entail an investment of about INR 100 billion with 45 billion in Phase I which includes 15 billion for the port development.[2] The Port is designed to handle 40 Mtpa.
+This project was initiated during the tenure of the DMK party in the state of Tamil Nadu.[3] The name of the project in its geographical location is misleading, named after the non-littoral locality of Thirukkuvalai (in the taluka of the same name), which is the birthplace of M. Karunanidhi, the major leader of the DMK party. The port project is in fact planned in the locality of Vettaikkaraniruppu, located in the Kilvelur taluka, between Velankanni and Vedaranyam. This locality is also closer to Velankanni and is easier to access from the latter as well as from the town of Vedaranyam.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal12" class="modal">
+        <div class="modal-header">
+          <div class="title">Pamban</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Pamban Government Port, located in Tamil Nadu, holds strategic significance as a maritime gateway along the southeastern coast of India. Operated under governmental jurisdiction, the port serves as a vital hub for trade and commerce, facilitating the import and export of various commodities. Equipped with modern infrastructure and advanced handling facilities, Pamban Port efficiently manages diverse cargo, including petroleum products, agricultural goods, and general cargo, contributing significantly to regional economic activity. Its strategic connectivity to road and rail networks ensures seamless transportation of goods, further enhancing its pivotal role in the maritime industry. With ongoing development initiatives aimed at enhancing capacity and efficiency, Pamban Government Port continues to play a crucial role in fostering economic growth and development in Tamil Nadu and beyond.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal13" class="modal">
+        <div class="modal-header">
+          <div class="title">Rameswaram</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Rameswaram Government Port, situated in Tamil Nadu, holds paramount importance as a key maritime facility along the southern coast of India. Operated under governmental authority, the port serves as a vital nexus for trade and commerce, facilitating the movement of diverse commodities. With its modern infrastructure and state-of-the-art facilities, Rameswaram Port efficiently handles various cargo types, including petroleum products, agricultural goods, and general cargo, thereby significantly contributing to regional economic activity. Enhanced by its seamless connectivity to road and rail networks, the port serves as a crucial artery in the maritime industry, ensuring the swift transportation of goods to and from its vicinity. As ongoing development initiatives focus on bolstering capacity and operational efficiency, Rameswaram Government Port remains pivotal in driving economic growth and development, not only in Tamil Nadu but also across the wider maritime landscape of India.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal14" class="modal">
+        <div class="modal-header">
+          <div class="title">Udangudi</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            The Udangudi Port project in Tamil Nadu, spearheaded by the Tamil Nadu Generation and Distribution Corporation (TANGEDCO), represents a significant endeavor aimed at facilitating the importation of coal for its ambitious 1600 MW Udangudi supercritical thermal power project in the Thoothukudi District. Central to this initiative is the construction of an open sea jetty intended to serve as a pivotal point for receiving coal shipments critical to powering the thermal plant.
+            The decision to develop this captive port underscores TANGEDCO's strategic vision to ensure a reliable and efficient supply chain for the Udangudi power project. By establishing a dedicated marine facility, TANGEDCO seeks to streamline the logistics involved in importing coal, a key component for the operation of the supercritical thermal power plant. The port's location in Udangudi holds geographical significance, ideally positioned to facilitate the transportation of coal via maritime routes, optimizing accessibility and minimizing logistical challenges.
+            Furthermore, the development of Udangudi Port aligns with broader regional economic objectives, potentially fostering job creation and stimulating local commerce through associated industries and services. This initiative not only addresses TANGEDCO's immediate operational needs but also signals a long-term commitment to infrastructure development in the region, with potential ripple effects on the local economy and broader energy landscape.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal15" class="modal">
+        <div class="modal-header">
+          <div class="title">Koodankulam</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>The Koodankulam port, located near the Koodankulam Nuclear Power Plant (KKNPP) in Tamil Nadu, India, serves as a specialized maritime facility primarily designed to support the transportation needs of the nuclear power plant. This port plays a vital role in handling heavy and sensitive cargo, including nuclear reactor components, fuel, and other materials essential for the operation and expansion of the Koodankulam Nuclear Power Plant.
+            The strategic positioning of the Koodankulam port along the southeastern coast of India offers convenient access to the Arabian Sea, facilitating the importation and exportation of large-scale equipment and materials required for nuclear energy generation. By establishing a dedicated port in close proximity to the Koodankulam Nuclear Power Plant, logistical challenges associated with transporting specialized nuclear-related cargo over long distances are mitigated, leading to improved operational efficiency and cost-effectiveness..</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal16" class="modal">
+        <div class="modal-header">
+          <div class="title">Kanyakumari</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>The Kanyakumari minor port, located in the Kanyakumari district of Tamil Nadu, India, serves as a significant maritime facility catering to coastal shipping and fishing activities in the region. This port is classified as a minor port due to its smaller size and capacity compared to major ports in India.
+
+            The Kanyakumari minor port plays a crucial role in supporting local fishing communities by providing a base for fishing vessels to dock, unload their catch, and access necessary supplies and services. Fishermen rely on this port for activities such as fueling, ice supply, and storage of equipment.
+            
+            In addition to its importance for fishing, the Kanyakumari port also facilitates coastal shipping operations, allowing for the transportation of goods along the southern coast of India. Coastal vessels can utilize this port for loading and unloading cargo, contributing to regional trade and connectivity.
+            
+            The development and management of the Kanyakumari minor port are overseen by the Tamil Nadu Maritime Board and local authorities. Efforts are continually made to improve port infrastructure and facilities to enhance operational efficiency and support the needs of the fishing and coastal shipping sectors.
+            
+            The Kanyakumari minor port, while not as large-scale as major ports in India, plays a vital role in the socio-economic fabric of the region by supporting fishing activities, coastal trade, and local livelihoods. It represents an essential maritime asset for the Kanyakumari district and contributes to the overall development of coastal infrastructure in Tamil Nadu..</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modal17" class="modal">
+        <div class="modal-header">
+          <div class="title">Colachel</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+        </p>Colachel Port, located in Kanyakumari district of Tamil Nadu, India, is a proposed major port project that has garnered significant attention for its potential to boost maritime trade and economic development in the region. Situated strategically along the southern tip of the Indian peninsula, Colachel Port is envisioned to become a key maritime gateway, offering efficient handling of cargo and facilitating trade with both domestic and international markets. The proposed port project aims to capitalize on the region's proximity to major shipping routes and its strategic location near the busy international sea lanes. Once operational, Colachel Port is expected to play a crucial role in promoting industrial growth, generating employment opportunities, and enhancing connectivity for the southern districts of Tamil Nadu. Additionally, the development of Colachel Port is anticipated to have a positive impact on the overall socio-economic development of the region by attracting investments and fostering trade relations. While the project is still in the planning and development stages, it holds immense potential to emerge as a significant maritime asset for Tamil Nadu and contribute to the nation's maritime trade landscape.</p>
+        </div>
+      </div>
+<!-- end of minor -->
+      
+<!-- start major port maps -->
+      <div id="overlay"></div>
+
+      <div id="modalennore" class="modal">
+        <div class="modal-header">
+          <div class="title">Ennore Port</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Ennore Port, officially known as Kamarajar Port Limited, is a major port located on the Coromandel Coast in the state of Tamil Nadu, India. It is situated about 20 kilometers north of Chennai Port and is strategically positioned to serve as a gateway for cargo handling in the region. Ennore Port has emerged as a vital maritime hub, equipped with modern infrastructure and facilities to efficiently handle various types of cargo, including bulk, breakbulk, and containerized cargo. The port's strategic location, coupled with its excellent connectivity to major transportation networks, including road and rail, ensures seamless movement of goods to and from the port, facilitating efficient logistics operations. Ennore Port's commitment to environmental sustainability is reflected in its eco-friendly practices and initiatives for pollution control and waste management. Additionally, the port contributes significantly to the economic development of Tamil Nadu by attracting investments, generating employment opportunities, and promoting international trade. With ongoing expansion and development initiatives, Ennore Port continues to strengthen its position as a leading maritime gateway in South India, playing a crucial role in driving economic growth and prosperity in the region.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modalchennai" class="modal">
+        <div class="modal-header">
+          <div class="title">Chennai Port</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Chennai Port, also known as the Chennai Port Trust, is one of the oldest and busiest major ports in India, situated on the Coromandel Coast in Tamil Nadu. Established in 1881, Chennai Port has evolved into a key maritime gateway, serving as a vital hub for trade and commerce in South India. The port boasts modern infrastructure and state-of-the-art facilities, allowing it to efficiently handle various types of cargo, including containers, bulk, and breakbulk cargo. Chennai Port is strategically located, providing easy access to major industrial and commercial centers in Tamil Nadu and neighboring states. Its excellent connectivity to road, rail, and air networks further enhances its accessibility and facilitates seamless transportation of goods to and from the port. Chennai Port plays a significant role in driving economic growth and development by attracting investments, generating employment opportunities, and promoting international trade. Despite facing competition from other ports in the region, Chennai Port remains a critical maritime asset, contributing significantly to India's maritime trade landscape and regional prosperity.</p>
+        </div>
+      </div>
+
+      <div id="overlay"></div>
+
+      <div id="modalva" class="modal">
+        <div class="modal-header">
+          <div class="title">V.O.Chidambaranar Port</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>V.O. Chidambaranar Port, formerly known as Tuticorin Port, is a major seaport located in Tuticorin, Tamil Nadu, India. Named after V.O. Chidambaram Pillai, a prominent freedom fighter, the port is one of the busiest and most important ports on the east coast of India. Established in 1974, V.O. Chidambaranar Port serves as a vital gateway for trade and commerce, handling a diverse range of cargo including containers, bulk cargo, and petroleum products. The port boasts modern infrastructure and world-class facilities, enabling efficient cargo handling operations. Its strategic location provides easy access to major shipping routes, making it a preferred choice for both domestic and international trade. V.O. Chidambaranar Port plays a significant role in driving economic growth and development in the region by attracting investments, creating employment opportunities, and facilitating international trade. With ongoing expansion projects and initiatives to enhance operational efficiency, the port continues to strengthen its position as a key maritime hub in South India, contributing to the nation's maritime trade landscape and regional prosperity.</p>
+        </div>
+      </div>
+        <!--sea borders-->
+        <div id="overlay"></div>
+
+      <div id="india_west" class="modal">
+        <div class="modal-header">
+          <div class="title">Area 1</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>India's western sea border encompasses its maritime boundaries along the Arabian Sea, part of the northern Indian Ocean. These boundaries extend up to 200 nautical miles (370.4 km) from the coastline, defining India's Exclusive Economic Zone (EEZ) and granting sovereign rights over marine resources within this zone. India's maritime borders in the Arabian Sea are critical for trade, security, and strategic interests.
+            The Arabian Sea connects India with the Arabian Peninsula and the Horn of Africa, serving as a key route for maritime trade. Major ports along India's western coastline, including Kandla, Mumbai, Mangalore, and Kochi, facilitate the import and export of goods ranging from crude oil and petroleum products to minerals, agricultural produce, and manufactured goods. These ports are vital economic gateways, supporting India's external trade and economic growth.</p> </div>
+      </div>
+      <div id="overlay"></div>
+
+      <div id="india_east" class="modal">
+        <div class="modal-header">
+          <div class="title">India East</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>India's eastern sea border encompasses its maritime boundaries in the Bay of Bengal and the Indian Ocean. These boundaries, extending up to 200 nautical miles (370.4 km) from the coastline, delineate India's Exclusive Economic Zone (EEZ), granting sovereign rights over marine resources. Maritime disputes with Bangladesh and Myanmar over the Bay of Bengal's boundaries prompt diplomatic negotiations. India shares maritime borders with countries like Bangladesh, Myanmar, Thailand, Indonesia, and Malaysia, delineated through international treaties. Given the region's strategic significance, India maintains a naval presence to safeguard interests and ensure security. Collaborative efforts with neighboring nations bolster maritime security, combating piracy, smuggling, and other illicit activities. India's engagement underscores the importance of protecting its maritime interests in the dynamic eastern sea border region.</p>
+        </div>
+      </div>
+      <div id="overlay"></div>
+
+      <div id="india_andaman" class="modal">
+        <div class="modal-header">
+          <div class="title">India Andaman</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>India's maritime border in the Andaman Sea is delineated by its Exclusive Economic Zone (EEZ), extending up to 200 nautical miles (370.4 km) from its coastline. Situated to the east of the Andaman and Nicobar Islands, this expansive maritime zone confers upon India sovereign rights over the exploration and utilization of marine resources within its bounds, encompassing fishing, oil and gas exploration, and other economic activities. Adjacent to neighboring countries like Myanmar, Thailand, and Indonesia, India's maritime boundaries in the Andaman Sea adhere to international maritime laws and agreements. Given its strategic position along crucial shipping routes and its proximity to significant maritime chokepoints such as the Strait of Malacca, the Andaman Sea holds immense importance for India's maritime security framework. The presence of Indian naval bases strategically located in the Andaman and Nicobar Islands reinforces India's surveillance capabilities and facilitates the monitoring of maritime activities in the region. Furthermore, India actively engages in regional cooperation initiatives with neighboring nations to address common challenges such as piracy, illegal fishing, and maritime terrorism, thereby promoting stability and security in the Andaman Sea region.</p>
+        </div>
+      </div>
+      
+      <div id="overlay"></div>
+
+      <div id="srilanka_seaborders" class="modal">
+        <div class="modal-header">
+          <div class="title">Srilanka Seaborder</div>
+          <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Sri Lanka's maritime border, encompassing its territorial waters, exclusive economic zone (EEZ), and continental shelf, is a crucial aspect of the island nation's sovereignty and strategic significance in the Indian Ocean region. Within its territorial waters extending 12 nautical miles from its coastline, Sri Lanka exercises full control over shipping, fishing, and other activities. Beyond this zone, Sri Lanka's EEZ stretches up to 200 nautical miles, granting exclusive rights to explore, exploit, and manage marine resources. Additionally, Sri Lanka maintains sovereignty over its continental shelf, further extending its maritime domain. Maritime boundaries with neighboring countries like India and the Maldives are defined through bilateral agreements and international conventions. Situated along major international shipping routes, Sri Lanka's maritime borders are strategically important, with ports like Colombo serving as vital transshipment hubs. Ensuring maritime security is paramount, and the Sri Lankan Navy plays a key role in patrolling and enforcing maritime law to combat piracy, illegal fishing, smuggling, and other maritime threats. In essence, Sri Lanka's maritime border not only contributes significantly to its economic development but also underscores its role as a pivotal player in regional maritime affairs.</p>
+        </div>
+      </div>
+<!--sea routes-->
+<div id="chennai-kolkata" class="modal">
+  <div class="modal-header">
+    <div class="title">Chennai-Kolkata</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Chennai to Kolkata (1,400 km): This maritime route connects the bustling port city of Chennai with Kolkata, facilitating the movement of goods and cargo along the eastern coast of India. Ships traveling this route contribute significantly to regional trade and commerce, transporting a variety of goods such as textiles, electronics, machinery, and raw materials between these key industrial centers.</p></div>
+  </div>
+<div id="chennai-yango" class="modal">
+  <div class="modal-header">
+    <div class="title">Chennai-Yango</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Chennai to Yangon (1,300 km): Shipping between Chennai and Yangon serves as an important link in the regional maritime trade network, supporting the movement of goods between India and Myanmar. This route enables the transportation of commodities like rice, timber, minerals, and consumer products, facilitating economic exchanges and strengthening bilateral trade relations.</p></div>
+  </div>
+<div id="colmbo-kolkata" class="modal">
+  <div class="modal-header">
+    <div class="title">Colmbo-Kolkata</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Colombo to Kolkata (1,300 km): The maritime route from Colombo to Kolkata plays a crucial role in facilitating trade between Sri Lanka and India. Ships carrying goods such as tea, spices, garments, and industrial materials traverse the Bay of Bengal, contributing to the economic integration of these neighboring countries and fostering maritime connectivity in the region.</p></div>
+</div>
+
+<div id="chennai-blair" class="modal">
+  <div class="modal-header">
+    <div class="title">Chennai-Blair</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Chennai to Port Blair (1,300 km): This shipping route connects mainland India with the Andaman Islands, providing essential supplies and commodities to the remote archipelago. Ships transport goods, including food items, construction materials, fuel, and machinery, supporting the island's economy and meeting its developmental needs.</p> </div>
+</div>
+
+<div id="chennai-penang" class="modal">
+  <div class="modal-header">
+    <div class="title">Chennai-Penang</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Chennai to Penang (2,500 km): The maritime link between Chennai and Penang serves as a vital trade route in the Indian Ocean region, facilitating the movement of cargo between South India and Malaysia. Ships transport goods such as textiles, automotive parts, chemicals, and agricultural products, contributing to bilateral trade and economic cooperation.</p> </div>
+</div>
+
+<div id="nagapatinam-penag" class="modal">
+  <div class="modal-header">
+    <div class="title">Nagapatinam-Penag</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Nagapattinam to Penang (~1,300 km): The shipping route from Nagapattinam to Penang serves as an important link between South India and Malaysia, supporting trade and economic activities. Ships transport goods including seafood, agricultural produce, textiles, and electronic components, contributing to bilateral trade and regional connectivity.</p> </div>
+</div>
+
+<div id="colombo-penang" class="modal">
+  <div class="modal-header">
+    <div class="title">Colombo-Penang</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Colombo to Penang (~2,700 km): Shipping between Colombo and Penang is vital for connecting Sri Lanka with Malaysia and Southeast Asia. This route facilitates the transportation of goods such as rubber, tea, spices, and electronics, enhancing trade relations and strengthening maritime logistics in the region.</p></div>
+  </div>
+<div id="kolkata-yango" class="modal">
+  <div class="modal-header">
+    <div class="title">Kolkata - Yango</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Kolkata to Yangon (~1,100 km): Shipping between Kolkata and Yangon connects the ports of India and Myanmar, supporting bilateral trade and maritime logistics. This route is important for transporting commodities like petroleum products, machinery, minerals, and consumer goods, contributing to economic development and regional connectivity.</p></div>
+</div>
+<div id="kolkata-penang" class="modal">
+  <div class="modal-header">
+    <div class="title">Kolkata-Penang</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Kolkata to Penang (2,200 km): Shipping from Kolkata to Penang facilitates trade between India and Malaysia, transporting goods such as iron ore, machinery, chemicals, and food products. This route supports economic exchanges and contributes to the development of maritime infrastructure in the Bay of Bengal region.</p></div>
+</div>
+
+<div id="portblair-yango" class="modal">
+  <div class="modal-header">
+    <div class="title">Portblair-Yango</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Port Blair to Yangon (~1,200 km): The maritime route from Port Blair to Yangon connects the Andaman Islands with Myanmar, enabling the transportation of goods and supplies to these remote areas. Ships carry commodities like construction materials, household goods, and perishable items, supporting local economies and maritime logistics.</p></div>
+</div>
+
+<div id="mumbai-colmbo" class="modal">
+  <div class="modal-header">
+    <div class="title">Mumbai-Colmbo</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Mumbai to Colombo (1,300 km): Shipping between Mumbai and Colombo strengthens maritime trade between India and Sri Lanka. Ships transport goods such as petroleum products, textiles, pharmaceuticals, and automotive components, facilitating economic cooperation and regional integration.</p></div>
+</div>
+
+<div id="capetown-mumbai" class="modal">
+  <div class="modal-header">
+    <div class="title">Capetown-Mumbai</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Cape Town to Mumbai (~8,000 km): This long-distance maritime route connects the ports of Cape Town in South Africa with Mumbai in India, supporting global trade and logistics. Ships transport a wide range of goods including minerals, agricultural produce, machinery, and consumer goods, contributing to international commerce and maritime connectivity.</p> </div>
+</div>
+
+<div id="zanzibar-mumbaie" class="modal">
+  <div class="modal-header">
+    <div class="title">Zanzibar-Mumbaie</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Zanzibar to Mumbai (~4,500 km): Shipping from Zanzibar to Mumbai facilitates trade between East Africa and India, transporting commodities like spices, coffee, seafood, and textiles. This route plays a role in enhancing economic ties and maritime cooperation between the two regions.</P> </div>
+</div>
+
+<div id="aden-mimba" class="modal">
+  <div class="modal-header">
+    <div class="title">Aden-Mimba</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Aden to Mumbai (~2,500 km): The maritime route from Aden to Mumbai supports trade and logistics between Yemen and India. Ships carry goods such as coffee, fruits, textiles, and minerals, contributing to bilateral trade relations and maritime connectivity in the Arabian Sea region.</p></div>
+</div>
+
+<div id="karachi-mumbai" class="modal">
+  <div class="modal-header">
+    <div class="title">Karachi-Mumbai</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Karachi to Mumbai (~1,100 km): Shipping between Karachi and Mumbai is vital for connecting the ports of Pakistan and India. This route facilitates the transportation of goods including textiles, agricultural produce, chemicals, and industrial materials, contributing to regional trade dynamics and economic cooperation.</p></div>
+</div>
+
+
+
+<div id="chennai-colombo" class="modal">
+  <div class="modal-header">
+    <div class="title">Chennai-Colombo</div>
+    <button class="close-button" data-close-button>&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Chennai to Colombo (~750 km): The maritime link between Chennai and Colombo supports trade and connectivity between South India and Sri Lanka. Ships transport goods such as cement, paper products, fruits, and vegetables, contributing to bilateral trade relations and maritime logistics in the Indian Ocean region.</p> </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+      <script src="{{url_for('static', filename='map.js')}}"></script>  
+    <script>
+      imageMapResize();
+      
+    </script>
+    <script>
+      moveNewsItems();
+      
+    </script>
+  </body>
+</html>

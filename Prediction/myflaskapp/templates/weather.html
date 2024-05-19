@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='weather.css')}}">
+   
+</head>
+<body>
+    
+<header class="header1">
+
+    <a href="#" class="logo"> <span>MARINE</span> MATE</a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar1">
+        <a href="/">Home</a>
+        <a href="/#about">about</a>
+        
+        <a href="/weather">Weather</a>
+        
+        <a href="/ports">Ports</a>
+        <a href="/prediction">Prediction</a>
+    </nav>
+
+</header>
+<div class="wid">
+  <a class="weatherwidget-io" href="https://forecast7.com/en/13d0880d27/chennai/" data-label_1="CHENNAI" data-label_2="WEATHER" data-theme="original" >CHENNAI WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+</div>
+<!-- weather iframe -->
+<div class="container" style="margin-top: 100px;">
+  <div>
+    <iframe
+      src="https://map.openseamap.org/weather.php?zoom=7.17&lon=78.92264&lat=13.09768"
+      height="650"
+      width="500"
+      title="Iframe Example"
+    ></iframe>
+  </div>
+  <div  style="margin-left:30px; margin-right:-20px; width:800px;">
+        
+    <ul class="map_head">
+      <li>
+      Layers
+      </li>
+      <li>
+        Description
+      </li>
+      <li>
+        Beaufort Scale(Bft)
+      </li>
+      <li>
+        The Beaufort Scale is an empirical measure that relates wind speed to observed conditions at sea or on land. Its full name is the Beaufort wind force scale. Below is a table showing the Beaufort Scale with speeds in knots, miles per hour and kilometres per hour.
+      </li>
+      <li>
+        Wind
+      </li>
+      <li>
+        The wind layer on a weather forecast map displays wind speed and direction, aiding in weather prediction, outdoor activity planning, and risk assessment. It helps users anticipate changes in weather conditions, plan accordingly, and assess potential hazards associated with strong winds. </li>
+      <li>
+        Air Pressure
+      </li>
+      <li>
+        The air pressure layer on a weather forecast map depicts atmospheric pressure variations, crucial for predicting weather patterns, tracking storms, and ensuring aviation safety. It aids in assessing temperature gradients, weather system movements, and potential impacts on local climates and ecosystems.</li>
+      <li>
+        Temperature
+      </li>
+      <li>
+        The temperature layer on a weather forecast map provides insights into climate variations, aiding in planning outdoor activities, assessing heat-related risks, and optimizing agricultural practices. It assists in understanding temperature gradients, trends, and impacts on human health, infrastructure, and natural ecosystems.</li>
+      <li>
+        Precipitation
+      </li>
+      <li>
+        The precipitation layer on a weather forecast map displays rainfall and snowfall patterns, essential for predicting weather conditions, managing water resources, and assessing flood risks. It aids in planning outdoor activities, agricultural scheduling, and monitoring drought conditions. 
+      </li>
+      <li>
+        Wave Height
+      </li>
+      <li>
+       
+The wave height layer on a weather forecast map provides critical information about ocean wave heights, essential for maritime safety, coastal planning, and recreational activities. It aids in predicting sea conditions, assessing navigation hazards, and planning for coastal infrastructure maintenance.
+      </li>
+      <li>
+      Nautical Chart
+      </li>
+      <li>
+        The nautical chart layer on a weather forecast map displays navigational information crucial for marine navigation, including water depths, navigational aids, and hazards. It aids in safe passage planning, vessel routing, and avoiding maritime accidents. Additionally, it supports maritime commerce, recreational boating, and coastal resource management by providing detailed information about coastal features, shipping lanes, and marine protected areas.
+      </li>
+    </div>
+</div>
+<!-- weather api -->
+<div> 
+  <h3 class="weather_headings">Weather Search!</h3>
+</div>
+    <div class="container" style="margin-top: 100px;">
+      <form class="col-md-12 row">
+        <div class="col-md-6">
+          <label for="lat" class="mt-3">Latitude</label>
+          <input type="text" class="form-control p-3" name="lat" id="lat">
+          <label for="lon" class="mt-3">Longitude</label>
+          <input type="text" class="form-control p-3" name="lon" id="lon">
+          <button type="button" class="btn mt-5" onclick="fetch()">Submit</button>
+          
+          <!--<button type="button" class="btn mt-5" onclick="fetch_marine()">Submit</button>-->
+        </div>
+        <div class="col-md-6">
+          <label for="lat" class="mt-3">City</label>
+          <input type="text" class="form-control p-3" name="city" id="city">
+          <button type="button" class="btn mt-5" onclick="fetch1()">Submit</button>
+        </div>
+       </form>
+    </div>
+    <div class="container" style="margin-top:70px;">
+         <div class="col-md-12 row">
+           <div class="col-md-4">
+             <div class="list-design"><p class="list-div">Location <span id="location" class="float-end"></span></p></div>
+             <div class="list-design"><p class="list-div">Region <span id="region" class="float-end"></span></p></div>
+             <div class="list-design"><p class="list-div">Country <span id="country" class="float-end"></span></p></div>
+             <div class="list-design"><p class="list-div">LatLng <span id="latlng" class="float-end"></span></p></div>
+           </div>
+           <div class="col-md-4 text-center">
+            <img class="mt-5" id="imgs" src="">
+            <h2 id="condition"></h2>
+           </div>
+           <div class="col-md-4">
+             <div class="list-design"><p class="list-div">Temperature <span id="temp" class="float-end"></span></p></div>
+             <div class="list-design"><p class="list-div">Wind Speed <span id="wind_speed" class="float-end"></span></p></div>
+             <div class="list-design"><p class="list-div">Wind Direction <span id="wind_dir" class="float-end"></span></p></div>
+             <div class="list-design"><p class="list-div">Pressure MB <span id="pressure_mb" class="float-end"></span></p></div>
+           </div>
+         </div>
+       </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+  function fetch(){
+      var lat = jQuery('#lat').val();
+      var lon = jQuery('#lon').val();
+      var lats = lat.toString();
+      var lons = lon.toString();
+
+      console.log(lats);
+      var key = "a9d1cec8882f4f8e852175602241303";
+
+        if(lat!="" && lon!=""){ 
+          jQuery.ajax({
+          type:'GET',
+          url:'https://api.weatherapi.com/v1/current.json',
+          data:"key=" + key +"&q="+lats + ","+lons,
+          success:function(result){
+           var res = JSON.parse(JSON.stringify(result));
+           $('#location').html(res.location.name);
+           $('#region').html(res.location.region);
+           $('#country').html(res.location.country);
+           $('#latlng').html(res.location.lat, res.location.lon);
+           $('#temp').html(res.current.temp_c);
+           $('#wind_speed').html(res.current.wind_kph);
+           $('#wind_dir').html(res.current.wind_dir);
+           $('#pressure_mb').html(res.current.pressure_mb);
+           var i = res.current.condition.icon;
+           var j = i.substring(2);
+           var k = "https://"
+           var l = k.concat(j);
+           $('#imgs').attr('src',l);
+           $('#condition').html(res.current.condition.text);
+
+
+        }
+        })
+      }
+    }
+
+// for marine
+
+function fetch_marine(){
+      var lat = jQuery('#lat').val();
+      var lon = jQuery('#lon').val();
+      var lats = lat.toString();
+      var lons = lon.toString();
+
+      console.log(lats);
+      var key = "84abf42186344202baf65155241503";
+
+        if(lat!="" && lon!=""){ 
+          jQuery.ajax({
+          type:'GET',
+          url:'https://api.weatherapi.com/v1/marine.json',
+          data:"key=" + key +"&q="+lats + ","+lons,
+          success:function(result){
+           var res = JSON.parse(JSON.stringify(result));
+           $('#location').html(res.location.name);
+           $('#region').html(res.location.region);
+           $('#country').html(res.location.country);
+           $('#latlng').html(res.location.lat, res.location.lon);
+          
+           $('#wind_speed').html(res.forecastday.tides);
+           $('#wind_dir').html(res.current.wind_dir);
+           $('#pressure_mb').html(res.current.pressure_mb);
+           var i = res.current.condition.icon;
+           var j = i.substring(2);
+           var k = "https://"
+           var l = k.concat(j);
+           $('#imgs').attr('src',l);
+           $('#condition').html(res.current.condition.text);
+
+
+        }
+        })
+      }
+    }
+
+//end marine
+    function fetch1(){
+      var city = jQuery('#city').val();
+      var key = "a9d1cec8882f4f8e852175602241303";
+
+        if(lat!="" && lon!=""){ 
+          jQuery.ajax({
+          type:'GET',
+          url:'https://api.weatherapi.com/v1/current.json',
+          data:"key=" + key +"&q="+city,
+          success:function(result){
+           var res = JSON.parse(JSON.stringify(result));
+           $('#location').html(res.location.name);
+           $('#region').html(res.location.region);
+           $('#country').html(res.location.country);
+           $('#latlng').html(res.location.lat,res.location.log);
+           $('#temp').html(res.current.temp_c);
+           $('#wind_speed').html(res.current.wind_kph);
+           $('#wind_dir').html(res.current.wind_dir);
+           $('#pressure_mb').html(res.current.pressure_mb);
+           var i = res.current.condition.icon;
+           var j = i.substring(2);
+           var k = "https://"
+           var l = k.concat(j);
+           $('#imgs').attr('src',l);
+           $('#condition').html(res.current.condition.text);
+
+        }
+        })
+      }
+    }
+    
+</script>
+<script src="{{url_for('static', filename='nav.js')}}"></script>
+</body>
+</html>

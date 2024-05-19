@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='ecostyle(1).css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='ecostyle(2).css')}}">
+     <!--navbar-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Lora:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Eco-System</title>
+    <style>
+        body {
+            font-family: 'Lora', serif;
+        }
+        
+        h1{
+            font-family: 'Poppins', sans-serif;
+            font-size:5rem;
+        } 
+        h2{
+            font-family: 'Poppins', sans-serif;
+            font-size:3.5rem;
+        }
+        p {
+            font-family: 'Crimson Text', serif;
+        }
+        a{
+            font-family: 'Nunito', sans-serif;
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+        * {
+          font-family: 'Nunito', sans-serif;
+          margin: 0;
+          padding: 0px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          text-decoration: none;
+          outline: none;
+          border: none;
+          text-transform: capitalize;
+          -webkit-transition: all .2s linear;
+          transition: all .2s linear;
+        }
+        
+        html {
+          font-size: 62.5%;
+          scroll-behavior: smooth;
+          scroll-padding-top: 5rem;
+          overflow-x: hidden;
+        }
+        
+        html::-webkit-scrollbar {
+          width: 1rem;
+        }
+        
+        html::-webkit-scrollbar-track {
+          background: #ffffff;
+        }
+        
+        html::-webkit-scrollbar-thumb {
+          background: rgb(255, 111, 0);
+        }
+        
+        body {
+          background: rgba(184, 209, 218, 0.638);
+          
+        }
+
+        
+        .header1 {
+          position: fixed;
+          
+          top: 0;
+          left: 0;
+          right: 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display:flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          padding: 0 9%;
+          z-index: 10000;
+          background: rgb(184, 209, 218);
+          
+        }
+        
+        .header1 .logo {
+          
+          color: #fff;
+          font-size: 3rem;
+          text-decoration:none;
+        }
+        
+        .header1 .logo span {
+          color: rgb(255, 111, 0);
+        }
+        
+        .header1 .navbar1 a {
+          display: inline-block;
+          padding: 1.7rem 2rem;
+          font-size: 1.7rem;
+          color: #000000;
+          text-decoration:none;
+        }
+        
+        .header1 .navbar1 a:hover {
+          background:  #EEE9DA;
+        }
+        #menu-btn {
+          font-size: 3rem;
+          color: #fff;
+          cursor: pointer;
+          display: none;
+        }
+        @media (max-width: 768px) {
+          #menu-btn {
+            display: inline-block;
+          }
+          #menu-btn.fa-times {
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+          }
+          .header1 {
+            padding: 2rem;
+          }
+          .header1 .navbar1 {
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            background: #BDCDD6;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          }
+          .header1 .navbar1.active {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          }
+          .header1 .navbar1 a {
+            display: block;
+            font-size: 2rem;
+          }
+        }
+        
+    </style>
+
+</head>
+<body>
+    <header class="header1">
+
+        <a href="#" class="logo"> <span>MARINE</span> MATE</a>
+    
+        <div id="menu-btn" class="fas fa-bars"></div>
+    
+        <nav class="navbar1">
+            <a href="/#home">home</a>
+            <a href="/#about">about</a>
+            
+            <a href="/weather">Weather</a>
+            
+            <a href="/ports">Ports</a>
+            <a href="/prediction">Prediction</a>
+        </nav>
+    
+    </header>
+    <section class="index-part-3">
+        <div class="container">
+                <div class="row why-div">
+                  <div class="text-center">
+                         <h1>Important Species</h1>
+                         
+                  </div>
+                  <hr class="hr-short">
+                       
+
+                       <div class="sub-text text-center">
+                    
+                             <p class="font-1">
+                                The Important species and their species Identification can be described by the following:
+                             </p>
+                       </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-9 col-sm-12 col-md-9 col-xs-12">
+                     <div class="holder-para">
+                      <h2>Flower Prawn</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Flower Shrimp (Atyopsis moluccensis) are freshwater shrimp originating from Southeast Asia. They are often referred to as Bamboo Shrimp due to their popularity in aquarium communities worldwide. These colorful shrimp can change hues rapidly, going from tan to brown to red. They have a distinctive racer stripe down their backs. These shrimp grow to about 3.5 inches in length, making them one of the larger freshwater shrimp species. A 20-gallon tank is recommended to provide ample space for their exploration and hiding. Flower Shrimp are peaceful and exhibit animated personalities.Besides Flower Shrimp, they go by various names, including Asian Filter Shrimp, Fan Shrimp, and Timber Shrimp.</p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/flower_01.jpg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+
+                <hr class="line-full">
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Sand Lobster</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Sand Lobsters, also known as Slipper Lobsters, are a family of about 90 species of achelate crustaceans found in warm oceans and seas worldwide. They are not true lobsters but are more closely related to spiny lobsters and furry lobsters. These instantly recognizable creatures have enlarged antennae that project forward from their heads as wide plate.  </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/sand-lobster') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div>
+
+                <hr class="line-full">
+                
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Rock Lobster</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Rock Lobster, also known as Spiny Lobster, belongs to the family Palinuridae and encompasses approximately 60 species of achelate crustaceans found in warm oceans and seas worldwide. Despite the name, they are not true lobsters but are more closely related to spiny lobsters and furry lobsters. These fascinating creatures have enlarged antennae projecting forward from their heads as wide plates. They inhabit continental shelves at depths of up to 500 meters and feed on mollusks, crustaceans, polychaetes, and echinoderms. Slipper lobsters grow slowly, live to a considerable age, and lack giant neurons for tailflips, relying on other means to escape predators. </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/Rock_lobster.webp') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                <hr class="line-full">
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Deep Sea lobster</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Deep Sea Lobsters, also known as Thaumastochelidae, constitute a family of fascinating crustaceans found in the depths of our oceans. There are five known species within this family: three in the genus Thaumastocheles and two in the genus Thaumastochelopsis. These lobsters are remarkable for their adaptations to the deep-sea environment. They are blind, a feature that aids their survival in the darkness of the abyss. </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/deepsea_lobster.jpg') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div>
+                <hr class="line-full">
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Mud Crabs</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Mud Crabs, also known as Mangrove Crabs, belong to the family Portunidae. These fascinating crustaceans are found in the estuaries and mangroves of Africa, Australia, and Asia. In their most common forms, their shell colors vary from a deep, mottled green to very dark brown.These crabs are highly cannibalistic, especially during molting. Females can give birth to a million offspring, which can grow up to 3.5 kg in size and have a shell width up to 24 cm wide. </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/mud_crab.jpeg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                <hr class="line-full">
+                
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Sea Crab</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Portunus pelagicus, also known as the blue crab, blue swimmer crab, blue manna crab, and flower crab, is a species of large crab found in the Indo-Pacific, including off the coasts of Indonesia, Malaysia, Cambodia, Thailand, the Philippines, and Vietnam. The males are bright blue with white spots and long chelipeds, while females have a duller green/brown color and a more rounded carapace (up to 20 centimeters wide). These crabs stay buried under sand or mud most of the time, emerging during high tide to feed on various organisms such as bivalves, fish, and macroalgae. </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/sea_crab.jpeg') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div>
+                <hr class="line-full">
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Cuttle Fish</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Cuttlefish, also known as cuttles, are marine molluscs belonging to the order Sepiida. They share the class Cephalopoda with squid, octopuses, and nautiluses. These fascinating creatures possess a distinctive internal shell called the cuttlebone, which they use for buoyancy control. With their large, W-shaped pupils, eight arms, and two tentacles adorned with denticulated suckers, cuttlefish secure their prey. Their size typically ranges from 15 to 25 cm (6 to 10 inches), although the giant cuttlefish (Sepia apama) can reach up to 50 cm (20 inches) in mantle length and weigh over 10.5 kg (23 lb). Cuttlefish exhibit remarkable intelligence and have one of the largest brain-to-body size ratios among invertebrates. </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/cuttle.jpg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                <hr class="line-full">
+               
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Squid</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Squid, part of the order Teuthida, are fascinating cephalopods found in both coastal and oceanic waters. They possess elongated tubular bodies, short compact heads, and ten arms. Two of these arms transform into long, slender tentacles adorned with toothed, horny rings. Squid eyes, almost as complex as human eyes, are usually set into the sides of their heads. Luminescent squids bear numerous light organs, possibly for recognition and attracting prey. These creatures serve as food for various animals, including sperm whales, bony fishes, and humans. The giant squid and colossal squid are the largest living invertebrates, with some reaching lengths of nearly 13 meters (about 43 feet) or more. </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/suid.webp') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div>
+                <hr class="line-full">
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Oyster</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Oysters, a diverse group of salt-water bivalve molluscs, inhabit marine or brackish environments. Their irregularly shaped, highly calcified valves distinguish them. While not all oysters belong to the superfamily Ostreoidea, some are consumed as delicacies. Notably, pearl oysters yield pearls, and windowpane oysters are prized for their shells. The term “oyster” traces back to the Old French oistre, derived from the Latin ostrea, which in turn comes from the Ancient Greek ὄστρεον (ostreon) meaning “oyster”.</p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/oyster.jpg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                <hr class="line-full">
+                
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Pearl Oyster</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Pearl oysters, a genus of saltwater oysters in the family Pteriidae, create a captivating inner shell layer called nacre, commonly known as “mother of pearl.” Unlike edible oysters (family Ostreidae) or freshwater pearl mussels (families Unionidae and Margaritiferidae), pearl oysters are distinct. Notably, Pinctada margaritifera and P. maxima are cultivated for South Sea and Tahitian pearls. These remarkable mollusks thrive in the central and eastern Indo-Pacific. On the reverse side of the 1,000-peso note in the Philippines, you can spot a pearl oyster. Various species within the genus produce pearls, each with unique sizes and colors. For instance, black South Sea pearls come from the black-lip oyster, while Akoya cultured pearls originate from the Akoya pearl oyster.  </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/pearl.jpg') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div> 
+                <hr class="line-full">
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Whelk</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Whelks, any of several carnivorous sea snail species with a swirling, tapered shell, inhabit temperate and tropical waters. They are consumed by humans, such as the common whelk found in the North Atlantic. Most whelks belong to the family Buccinidae and are known as “true whelks.” These fascinating mollusks feed on annelids, crustaceans, mussels, and other molluscs, using chemoreceptors to locate their prey. Historically, they have been used as food and even for creating a rich red dye. In the United States, “whelk” refers to large edible species in the genera Busycon and Busycotypus.</p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/whelk.jpeg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                <hr class="line-full">
+            
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Hammer Head shark</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Hammerhead sharks, a group of sharks forming the family Sphyrnidae, are named for their distinctive and unusual heads. These heads are flattened and laterally extended into a cephalofoil, resembling a T-shape or a “hammer”. The shark’s eyes are positioned at either end of this T-shaped structure, with their small mouths centered and underneath. Most hammerhead species belong to the genus Sphyrna, while the winghead shark has its own genus, Eusphyra.Hammerheads are found worldwide, preferring warmer waters along coastlines and continental shelves. Unlike most sharks, some hammerhead species form large schools during the day but become solitary hunters at night. Their known species range from approximately 0.9 to 6.0 meters (2 ft 11 in to 19 ft 8 in) in length and weigh between 3 to 580 kilograms (6.6 to 1,300 pounds). </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/hammer.jpg') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div> 
+                <hr class="line-full">
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Guitar Fish</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Guitarfish, also referred to as shovelnose rays, belong to the family Rhinobatidae. These fascinating creatures have an elongated body with a flattened head and trunk, along with small, ray-like wings. Their habitat spans tropical, subtropical, and warm temperate waters worldwide. In Australia and New Zealand, they are commonly known as shovelnose rays or shovelnose sharks. Guitarfish have a unique body form intermediate between sharks and rays. Their triangular or guitar-like head shape sets them apart from other rays. These bottom feeders bury themselves in mud or sand, consuming worms, crabs, and clams. Some species can tolerate salt, fresh, and brackish water, and they often inhabit coastal areas and estuaries.  </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/guitar.jpeg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                <hr class="line-full">
+            
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Whip Tail sting ray</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        The whiptail stingrays, a family known as Dasyatidae, belong to the order Myliobatiformes. These fascinating rays inhabit tropical to temperate marine waters worldwide, and some species have even ventured into freshwater environments in Africa, Asia, and Australia. Members of this family have flattened pectoral fin discs, varying from oval to diamond-like shapes. Their common name stems from their whip-like tails, which are significantly longer than the disc and lack dorsal and caudal fins. Except for the porcupine ray (Urogymnus asperrimus), all whiptail stingrays possess one or more venomous stings near the base of their tails, used for defense. When stinging their victims, they jerk their tails, leaving the stinger in the wound </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/whiptail.jpg') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div> 
+                <hr class="line-full">
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Javanese cow ray</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        The Javanese Cownose Ray (Rhinoptera javanica) is a large ray found in the Indian and Western Pacific Oceans, ranging from Oman to the Philippines and north to Japan. It inhabits coastal waters and often forms large schools near the surface. These rays have an unusual bi-lobed head with two large fleshy lobes under the snout. They are greyish-brown to greyish-green above and uniformly white below. The Javanese Cownose Ray possesses a single dorsal fin and a serrated venomous spine near the base of its whip-like tail. Pups are born at approximately 31 cm disc width, and they feed on small fishes, cephalopod molluscs, and other invertebrates. </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/javanese.jpg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                 <hr class="line-full">
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Seer fish (Spanish mackeral)</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Spanish mackerels, also known as seerfishes or seer fish, belong to the tribe Scomberomorini within the mackerel family (Scombridae). These pelagic fish are fast swimmers and predatory in nature.The Indo-Pacific king mackerel (Scomberomorus guttatus) is a sea fish found in the Indian Ocean and adjoining seas. It is a popular game fish, growing up to 45 kg (99 lb), and is known for its strong fighting ability. In countries like India, Sri Lanka, Bangladesh, and Pakistan, it is highly regarded. Seer fish is considered a delicacy in several regions of India. In Tamil Nadu and Andhra Pradesh, it is called “Vanjaram” in Tamil and Telugu. In coastal Maharashtra, it is known as “Surmāi,” and in Goan Konkani, it is called “Visvonn” or “Isvonn.” In Kerala, it is referred to as “Ayakoora” in North Malabar and “Ney-meen” in the southern districts.  </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/seer.jpeg') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div>
+                <hr class="line-full">
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Black king fish</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        The black kingfish, scientifically known as Rachycentron canadum, is a species of carangiform marine fish. It is the only extant representative of the genus Rachycentron and the family Rachycentridae. This fish also goes by other common names such as black salmon, ling, lemonfish, crabeater, prodigal son, codfish, and black bonito. The black kingfish has an elongated, fusiform body with a broad, flattened head. Its eyes are small, and the lower jaw slightly projects past the upper. The body is dark brown, grading to white on the belly, with two darker brown horizontal bands on the flanks. The mature black kingfish can reach a maximum length of 2 meters (78 inches) and a maximum weight of 78 kilograms (172 pounds). </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/black.jpeg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                <hr class="line-full">
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Snapper</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Snappers, found abundantly throughout the tropics, are active, schooling fish with elongated bodies, large mouths, sharp canine teeth, and blunt or forked tails. Most snappers grow to a length of 60–90 centimeters (2–3 feet). They are carnivores, preying on crustaceans and other fishes. The term “snapper” refers to about 105 species of fishes in the family Lutjanidae.  </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/snapper.png') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div>
+                <hr class="line-full">
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h2>Blood red snapper</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        The Malabar blood snapper (Lutjanus malabaricus), also known as the saddletail snapper, large-mouthed nannygai, red bass, and scarlet emperor, is a marine ray-finned fish belonging to the family Lutjanidae. Native to the Indian Ocean and the western Pacific, it ranges from Fiji to Japan. This species has a relatively deep body, reaching a maximum length of 100 cm (39 in). Its back and flanks are red or reddish-orange, paler on the lower shanks and abdomen. Juveniles display a wide, diagonal band of brown or black and a black band across the caudal peduncle.</p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/red.jpg') }}" alt="Image">
+                            </div>
+                    </div>
+                </div>
+                <hr class="line-full">
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h2>Malabar Reef cod</h2>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        The Malabar Reef cod (Epinephelus malabaricus), also known as blackspot rockcod, estuary rockcod, giant rock cod, greasy grouper, Malabar rockcod, Morgan’s cod, or speckled grouper, is a species of marine ray-finned fish, a grouper from the subfamily Epinephelinae which is part of the family Serranidae, which also includes the anthias and sea basses. It is found in the Indo-Pacific region and has entered the Mediterranean Sea from the Red Sea via the Suez Canal as a Lessepsian migrant. The Malabar reef cod inhabits various habitats, such as lagoons, mangroves, coral and rocky reefs, and sandy and muddy bottom areas, at depths ranging from 2 to 150 meters. </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img" id="img1">
+                                <img class="round-img img-responsive center-block" src="{{ url_for('static', filename='eco/malabar.jpeg') }}" alt="Image">
+                            </div>
+                    </div> 
+                </div>
+
+                
+
+                
+                
+        </div>
+    </section>
+   <script src="https://unpkg.com/scrollreveal"></script>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <script src="{{url_for('static', filename='nav.js')}}"></script>   
+</body>
+</html>
+
+

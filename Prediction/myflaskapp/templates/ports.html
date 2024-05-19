@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ports</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- navbar -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='port.css')}}">
+		<style>
+         @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+/* Apply styles only to elements within the header */
+body {
+            font-family: 'Nunito', serif;
+        }
+        
+        h1{
+            font-family: 'Nunito', serif;
+            font-size:5rem;
+        } 
+        h2{
+            font-family: 'Nunito', serif;
+            font-size:3.5rem;
+        }
+        p {
+            font-size:1.5rem;
+			font-family: 'Nunito', serif;
+        }
+        a{
+			font-size:1.5rem;
+            font-family: 'Nunito', serif;
+        }
+
+        html::-webkit-scrollbar {
+          width: 1rem;
+        }
+        
+        html::-webkit-scrollbar-track {
+          background: #ffffff;
+        }
+        
+        html::-webkit-scrollbar-thumb {
+          background: rgb(255, 111, 0);
+        }
+
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+ * {
+	font-family:    Georgia, serif;
+          margin: 0;
+          padding: 0px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          text-decoration: none;
+          outline: none;
+          border: none;
+          text-transform: capitalize;
+          -webkit-transition: all .2s linear;
+          transition: all .2s linear;
+        }
+
+		html {
+          font-size: 62.5%;
+          scroll-behavior: smooth;
+          scroll-padding-top: 5rem;
+          overflow-x: hidden;
+        }
+.header1 {
+	font-weight: bold;
+	position: fixed;
+          
+          top: 0;
+          left: 0;
+          right: 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display:flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          padding: 0 9%;
+          z-index: 10000;
+          background: rgb(184, 209, 218);
+}
+
+.header1 .logo {
+  color: #fff;
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.header1 .logo span {
+  color: rgb(255, 111, 0);
+}
+
+.header1 .navbar1 a {
+	font-weight: bolder;
+  display: inline-block;
+  padding: 1.7rem 2rem;
+  font-size: 1.7rem;
+  color: #000000;
+  text-decoration: none;
+}
+
+.header1 .navbar1 a:hover {
+  background: #EEE9DA;
+}
+
+.header1 #menu-btn {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header1 #menu-btn {
+    display: inline-block;
+  }
+  .header1 #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  .header1 .navbar1 {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #BDCDD6;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header1 .navbar1.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header1 .navbar1 a {
+    display: block;
+    font-size: 2rem;
+  }
+}
+
+
+		</style>
+	</head>
+	<body>
+<!-- header -->
+<header class="header1" >
+
+	<a href="#" class="logo"> <span>MARINE</span> MATE</a>
+
+	<div id="menu-btn" class="fas fa-bars"></div>
+
+	<nav class="navbar1">
+		<a href="/#home">home</a>
+		<a href="/#about">about</a>
+		
+		<a href="/weather">Weather</a>
+		
+		<a href="/ports">Ports</a>
+		<a href="/prediction">Prediction</a>
+	</nav>
+
+</header>
+
+
+
+<!-- Wrapper -->
+	<div id="wrapper" class="divided">
+
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Maps</h1>
+                
+							<p class="major"><!--[-->Explore Tamil Nadu’s maritime world: from <a href="/ports#first">Major Ports</a> and  <a href="/ports#minor_ports">Minor Ports</a> to <a href="/ports#sea_routes">Sea Routes</a>  and <a href="/ports#sea_borders">Sea Borders</a> to explore more Click Get Start👇.<!--]--></p>
+							<ul class="actions vertical">
+								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="static/port/banner.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first" >
+						<div class="content">
+							<h2>Major Ports</h2>
+							<p>Deive into the dynamic world of Tamil Nadu’s major ports. Discover their significant role in maritime trade, understand their infrastructure, and learn about their operations. Stay updated with live news and developments. Click learn more to explore more about  Major ports.</p>
+							<ul class="actions vertical">
+								<li><a href="/maps#major_map" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="static/port/pic01.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="minor_ports">
+						<div class="content">
+							<h2>Minor Ports</h2>
+							<p>Deive into the dynamic world of Tamil Nadu’s Minor ports ports. Discover their significant role in maritime trade, understand their infrastructure, and learn about their operations. Stay updated with live news and developments. Click learn more to explore more, Minor ports</p>
+							<ul class="actions vertical">
+								<li><a href="/maps#minor_map" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="static/port/spotlight02.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Four -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="sea_borders">
+						<div class="content">
+							<h2>Sea Borders</h2>
+							<p>This section provides a visual representation of the maritime boundaries of Tamil Nadu. By clicking on the areas in the image,you can learn about the significance of these borders, their establishment, and their impact on maritime activities. Click learn more to explore more, Sea Borders</p>
+							<ul class="actions vertical">
+								<li><a href="/maps#sea_borders" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="static/port/sea_borders1.jpeg" alt="" />
+						</div>
+					</section>
+           <!-- Five -->
+          <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="sea_routes">
+						<div class="content">
+							<h2>Sea Routes</h2>
+							<p>This section offers a detailed map of the Major sea routes in India. Users can click on specific routes in the image to understand their importance in maritime trade, their historical significance, and the types of vessels that commonly use them, Click learn more to explore more, Sea Routes</p>
+							<ul class="actions vertical">
+								<li><a href="/maps#sea_routes" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="static/port/sea_routes.png" alt="" />
+						</div>
+					</section>
+
+<!--
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Massa sed condimentum</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
+						</div>
+-->
+
+		<!-- Scripts -->
+		<script src="{{url_for('static', filename='nav.js')}}"></script>  
+
+	</body>
+</html>

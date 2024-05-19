@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ocean Information</title>
+  <style>
+    /* Sets the font family and the background color of the web page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightblue;
+    }
+
+    /* Sets the font size, color, and alignment of the heading */
+    h1 {
+      font-size: 36px;
+      color: white;
+      text-align: center;
+      /* Creates a shadow effect for the heading */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Sets the font size, color, and margin of the paragraph */
+    p {
+      font-size: 18px;
+      color: black;
+      margin: 20px;
+    }
+
+    /* Creates a footer with a fixed position and a height of 100px */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+    }
+
+    /* Creates a container for the footer content */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    /* Styles the links inside the footer */
+    .links {
+      list-style: none;
+      display: flex;
+    }
+
+    .links li {
+      margin: 0 10px;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Changes the color of the links on hover */
+    .links a:hover {
+      color: rgb(0, 200, 230);
+    }
+
+    /* Creates a container for the ocean animation */
+    .ocean {
+      height: 25%;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgb(0, 119, 190);
+    }
+
+    /* Creates a wave shape using border-radius */
+    .wave {
+      background: url(wave.png) repeat-x;
+      position: absolute;
+      top: -198px;
+      width: 6400px;
+      height: 198px;
+      animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* Creates a second wave with a different animation */
+    .wave:nth-of-type(2) {
+      top: -175px;
+      animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+      opacity: 1;
+    }
+
+    /* Creates an animation that moves the wave left and right */
+    @keyframes wave {
+      0% {
+        margin-left: 0;
+      }
+      100% {
+        margin-left: -1600px;
+      }
+    }
+
+    /* Creates an animation that makes the wave swell and shrink */
+    @keyframes swell {
+      0%, 100% {
+        transform: translate3d(0, -25px, 0);
+      }
+      50% {
+        transform: translate3d(0, 5px, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ocean Information</h1>
+  <p>This website provides information about the ocean and its wonders.</p>
+  <footer>
+    <div class="container">
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p>© 2023 All rights reserved</p>
+    </div>
+    <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+  </footer>
+</body>
+</html>

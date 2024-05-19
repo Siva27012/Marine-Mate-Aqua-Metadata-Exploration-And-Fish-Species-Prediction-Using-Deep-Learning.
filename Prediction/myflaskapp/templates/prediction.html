@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Prediction</title>
+  <!--nav bootstrap-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+  <!--upload bootstrap-->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='predict.css')}}">
+   
+  
+</head>
+<body>
+  <header class="header1">
+
+    <a href="#" class="logo"> <span>MARINE</span> MATE</a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar1">
+        <a href="/#home">home</a>
+        <a href="/#about">about</a>
+        
+        <a href="/weather">Weather</a>
+        
+        <a href="/ports">Ports</a>
+        <a href="/prediction">Prediction</a>
+    </nav>
+
+</header>-
+
+
+ <form class="form-container" id="image-form" enctype="multipart/form-data" action="/result" method="POST">
+
+	<div class="upload-files-container">
+		<div class="drag-file-area">
+			<span class="material-icons-outlined upload-icon"> file_upload </span>
+			<!--<h3 class="dynamic-message"> Drag & drop any file here </h3>-->
+			<label class="label">
+        <!--or--> <span class="browse-files"><input type="file" class="default-file-input" name="image" > <span class="browse-files-text">browse file</span> <span>from device</span> </span>
+      </label>	
+    </div>
+		<span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
+		<div class="file-block">
+			<div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
+			<span class="material-icons remove-file-icon">delete</span>
+			<div class="progress-bar"> </div>
+		</div>
+		<button type="" class="upload-button">Upload</button>
+	</div>
+  <div class="upload-files-container1 ml-4">
+    <div class="title3 ">Result</div>
+    
+    
+    <h2><div class="ans ml-4"> {{prediction}}</div><h2></h2>
+  </div>
+  
+</form>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    
+    <script src="{{url_for('static', filename='nav.js')}}"></script>
+    <script src="{{url_for('static', filename='upload.js')}}"> </script>
+</body>
+
+</html>
